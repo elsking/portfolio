@@ -47,6 +47,25 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
+.button {
+    background-color: #1f1f1f;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 6px;
+    border-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .3s;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #424242;
+}
+
 * {
     margin: 0;
     padding: 0;

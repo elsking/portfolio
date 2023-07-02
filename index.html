@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6K1Z7ZL14"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q6K1Z7ZL14');
+    </script>
+
     <title>eslking | coming soon</title>
 </head>
 <body>
@@ -14,9 +24,21 @@
         <p>
             Portfolio is currently under construction, come back later!
         </p>
+        <div id="buttons">
+            <button class="button" onclick="redirectToProjects()">
+                Projects
+            </button>
+            <button class="button" onclick="redirectToProjects()">
+                Commisions
+            </button>
+        </div>
     </section>
 
     <script>
+        function redirectToProjects() {
+            window.location.href = "projects.html";
+        }
+
         function randomInteger(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
@@ -31,6 +53,10 @@
             renderer.setSize( window.innerWidth, window.innerHeight );
             document.getElementById("background-container").appendChild( renderer.domElement )
             
+            window.onresize = function() {
+                renderer.setSize( window.innerWidth, window.innerHeight );
+            }
+
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
         
@@ -55,10 +81,10 @@
             let geometry = new THREE.PlaneGeometry(window.innerWidth / 2, 400, 100, 100);
             let material = new THREE.ShaderMaterial({
                 uniforms: {
-                    u_bg: {type: 'v3', value: rgb(162, 138, 241)},
-                    u_bgMain: {type: 'v3', value: rgb(162, 138, 241)},
-                    u_color1: {type: 'v3', value: rgb(162, 138, 241)},
-                    u_color2: {type: 'v3', value: rgb(82, 31, 241)},
+                    u_bg: {type: 'v3', value: rgb(255, 138, 241)},
+                    u_bgMain: {type: 'v3', value: rgb(162, 255, 241)},
+                    u_color1: {type: 'v3', value: rgb(255, 138, 241)},
+                    u_color2: {type: 'v3', value: rgb(82, 0, 241)},
                     u_time: {type: 'f', value: 30},
                     u_randomisePosition: { type: 'v2', value: randomisePosition }
                 },
