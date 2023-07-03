@@ -6,7 +6,14 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 
-    <script defer src="https://unpkg.com/@tinybirdco/flock.js" data-host="https://api.tinybird.co" data-token="p.eyJ1IjogImJhYzc0MWVmLWMyMDQtNDIwMC05NDNmLTE5ZjAyNzIzODRhMyIsICJpZCI6ICI0ZmJmM2I0NC02YjIwLTQyY2MtYmRiMi01MDYwYTBhMjJiYTYifQ.3keKJOi-udDKRGBK-m0YHVeiriN4w9WheyZwq8bEesY"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6K1Z7ZL14"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q6K1Z7ZL14');
+    </script>
 
     <title>petxmr | coming soon</title>
 </head>
@@ -15,7 +22,7 @@
     <section class="container">
         <header>Coming Soon...</header>
         <p>
-            Website is currently under construction, come back later!
+            Portfolio is currently under construction, come back later!
         </p>
     </section>
 
@@ -66,10 +73,10 @@
             let geometry = new THREE.PlaneGeometry(window.innerWidth / 2, 400, 100, 100);
             let material = new THREE.ShaderMaterial({
                 uniforms: {
-                    u_bg: {type: 'v3', value: rgb(255, 138, 241)},
-                    u_bgMain: {type: 'v3', value: rgb(162, 255, 241)},
-                    u_color1: {type: 'v3', value: rgb(255, 138, 241)},
-                    u_color2: {type: 'v3', value: rgb(82, 0, 241)},
+                    u_bg: {type: 'v3', value: rgb(200, 50, 50)},
+                    u_bgMain: {type: 'v3', value: rgb(165, 20, 20)},
+                    u_color1: {type: 'v3', value: rgb(0, 0, 0)},
+                    u_color2: {type: 'v3', value: rgb( 100, 0, 0 )},
                     u_time: {type: 'f', value: 30},
                     u_randomisePosition: { type: 'v2', value: randomisePosition }
                 },
